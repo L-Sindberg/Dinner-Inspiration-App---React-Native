@@ -1,6 +1,8 @@
 import React from 'react';
 import type { PropsWithChildren } from 'react';
 import {
+    ButtonProps,
+    Pressable,
     SafeAreaView,
     ScrollView,
     StatusBar,
@@ -8,7 +10,11 @@ import {
     Text,
     useColorScheme,
     View,
+    Modal,
 } from 'react-native';
+
+
+
 function RecommendationScreen(): JSX.Element {
 
 
