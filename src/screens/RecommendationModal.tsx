@@ -14,6 +14,7 @@ import {
     Button,
     Image,
 } from 'react-native';
+import { create } from 'react-test-renderer';
 
 
 type RecommendationModalProps = {
@@ -38,7 +39,7 @@ const RecommendationModal = (RecommendationModalProps: RecommendationModalProps)
 
                     }
                     } />
-                    <Text>This is the modal</Text>
+                    <Text style={styles.title}>Interested?</Text>
                     <Button title='close' onPress={onClose} />
                     <View style={{ flex: 2 }}>
                         <Pressable onPress={onClose} style={{
@@ -54,6 +55,15 @@ const RecommendationModal = (RecommendationModalProps: RecommendationModalProps)
     );
 }
 
+const styles = StyleSheet.create({
+    title: {
+        color: '#1170ba',
+        fontSize: 42,
+        fontFamily: 'Satisfy-Regular',
+        textAlign: 'center',
+        marginTop: -60
+    }
+})
 
 
 export default RecommendationModal;
